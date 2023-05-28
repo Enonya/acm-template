@@ -6,6 +6,13 @@
 
 参考了杨爷他们队的 [wf 板子库](https://github.com/fstqwq/All-in-at-the-River)
 
+### Requirements
+
+- `-shell-escape` in your TeX Arguments(XeLaTex).
+- Pygments
+- TeX Live 2022+
+- Consolas, Microsoft YaHei, Cambria font.
+
 ## Task List
 
 记得给板子加一些描述和注释（最后来做）
