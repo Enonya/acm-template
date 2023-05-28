@@ -6,7 +6,7 @@
 
 参考了杨爷他们队的 [wf 板子库](https://github.com/fstqwq/All-in-at-the-River)
 
-### Requirements
+## Requirements
 
 - `-shell-escape` in your TeX Arguments(XeLaTex).
 - Pygments
@@ -20,8 +20,8 @@
 - Tools
   - vimrc(under linux, for contest)
   - bash stress test script
-  - data generator, (seq, tree, graph) x
-  - notice & warns x
+  - data generator, (seq, tree, graph)
+  - notice & warns
 - Ds
   - List
   - Hash_table
@@ -34,46 +34,46 @@
   - Odt
 - Dp
   - Warns x
-  - Kmptual_tree
-  - Pack(optimize) x
+  - Dight_dp
+  - Pack(optimize)
   - Sos_dp
-  - Kmptual_treeize x
+  - Convex_optimize
 - Math
   - Comb_inv
-  - Kmptual_tree
+  - Qpow
   - Lucas, Ex_lucas x
   - Some_formula x
   - Matrix_mul
-  - Kmptual_tree
+  - Gauss_cut
   - Primes
   - Factors
   - Ex_gcd
   - Crt, Ex_crt
 - Misc
-  - Kmptual_tree
-  - Cdq x
-  - Wqs x
-  - Kmptual_treeeal x
+  - Mo
+  - Cdq
+  - Wqs
+  - Simulate_anneal
 - Graph
   - Spfa(include Minus_ring)
-  - Kmptual_tree
+  - Dijkstra
   - Floyd
   - Kruskal
-  - Kmptual_tree
+  - Prim
   - Multiper_lca
   - Tarjan_lca
-  - Kmptual_treeild_tree x
+  - Kruskal_rebuild_tree x
   - Topo_sort 
   - Euler_path
-  - Kmpjan_scc(2-SAT include)
+  - Tarjan_scc(2-SAT include)
   - Tarjan_vdcc
   - Tarjan_edcc
-  - Kmptual_tree
+  - Virtual_tree
   - Some_theory x
 - String
   - Kmp
   - Trie
   - 01_Trie
-  - String_hash x
+  - String_hash
   - Ac_automaton
-  - Some_theory x
+  - Some_theory
