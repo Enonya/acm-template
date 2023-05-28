@@ -20,8 +20,11 @@
 - Tools
   - vimrc(under linux, for contest)
   - bash stress test script
-  - data generator, (seq, tree, graph)
-  - notice & warns
+  - data generator, (seq, tree, graph) x
+  - notice & warns x
+- Basic
+  - Binary_search
+  - Time_complexity
 - Ds
   - List
   - Hash_table
@@ -33,7 +36,7 @@
   - Persistent_seg
   - Odt
 - Dp
-  - Warns x
+  - Warns
   - Dight_dp
   - Pack(optimize)
   - Sos_dp
@@ -41,8 +44,8 @@
 - Math
   - Comb_inv
   - Qpow
-  - Lucas, Ex_lucas x
-  - Some_formula x
+  - Lucas, Ex_lucas
+  - Some_formula (need formating)
   - Matrix_mul
   - Gauss_cut
   - Primes
@@ -51,9 +54,8 @@
   - Crt, Ex_crt
 - Misc
   - Mo
-  - Cdq
-  - Wqs
-  - Simulate_anneal
+  - Cdq x
+  - Wqs x
 - Graph
   - Spfa(include Minus_ring)
   - Dijkstra
@@ -65,7 +67,7 @@
   - Kruskal_rebuild_tree x
   - Topo_sort 
   - Euler_path
-  - Tarjan_scc(2-SAT include)
+  - Tarjan_scc(2-SAT include x)
   - Tarjan_vdcc
   - Tarjan_edcc
   - Virtual_tree
@@ -76,4 +78,4 @@
   - 01_Trie
   - String_hash
   - Ac_automaton
-  - Some_theory
+  - Some_theory (gugugu)

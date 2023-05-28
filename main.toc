@@ -1,0 +1,61 @@
+\contentsline {section}{\numberline {1}Tools}{2}{section.1}%
+\contentsline {subsection}{\numberline {1.1}vimrc}{2}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}对拍}{2}{subsection.1.2}%
+\contentsline {subsection}{\numberline {1.3}注意事项}{2}{subsection.1.3}%
+\contentsline {section}{\numberline {2}Basic}{2}{section.2}%
+\contentsline {subsection}{\numberline {2.1}二分}{2}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}时间复杂度分析}{2}{subsection.2.2}%
+\contentsline {section}{\numberline {3}Ds}{2}{section.3}%
+\contentsline {subsection}{\numberline {3.1}链表}{2}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}哈希表}{2}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}并查集}{3}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}树状数组}{3}{subsection.3.4}%
+\contentsline {subsection}{\numberline {3.5}线段树}{3}{subsection.3.5}%
+\contentsline {subsection}{\numberline {3.6}轻重链剖分}{4}{subsection.3.6}%
+\contentsline {subsection}{\numberline {3.7}主席树}{4}{subsection.3.7}%
+\contentsline {subsection}{\numberline {3.8}李超树}{5}{subsection.3.8}%
+\contentsline {subsection}{\numberline {3.9}珂朵莉树}{6}{subsection.3.9}%
+\contentsline {section}{\numberline {4}Dp}{6}{section.4}%
+\contentsline {subsection}{\numberline {4.1}一些注意事项}{6}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}背包 DP}{6}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}数位 DP}{7}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}子集卷积/SOS DP}{7}{subsection.4.4}%
+\contentsline {subsection}{\numberline {4.5}斜率优化}{7}{subsection.4.5}%
+\contentsline {section}{\numberline {5}Math}{7}{section.5}%
+\contentsline {subsection}{\numberline {5.1}线性求逆元以及组合数}{7}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}组合数性质}{7}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3}范德蒙德卷积}{8}{subsection.5.3}%
+\contentsline {subsection}{\numberline {5.4}快速幂}{8}{subsection.5.4}%
+\contentsline {subsection}{\numberline {5.5}矩阵乘法}{8}{subsection.5.5}%
+\contentsline {subsection}{\numberline {5.6}高斯消元}{8}{subsection.5.6}%
+\contentsline {subsection}{\numberline {5.7}质数}{8}{subsection.5.7}%
+\contentsline {subsection}{\numberline {5.8}约数}{9}{subsection.5.8}%
+\contentsline {subsection}{\numberline {5.9}Exgcd}{9}{subsection.5.9}%
+\contentsline {subsection}{\numberline {5.10}中国剩余定理}{9}{subsection.5.10}%
+\contentsline {subsection}{\numberline {5.11}ExCRT}{9}{subsection.5.11}%
+\contentsline {subsection}{\numberline {5.12}Lucas 定理}{9}{subsection.5.12}%
+\contentsline {subsection}{\numberline {5.13}Ex Lucas}{9}{subsection.5.13}%
+\contentsline {subsection}{\numberline {5.14}数论相关结论}{9}{subsection.5.14}%
+\contentsline {subsection}{\numberline {5.15}容斥原理}{10}{subsection.5.15}%
+\contentsline {subsection}{\numberline {5.16}二项式反演}{10}{subsection.5.16}%
+\contentsline {section}{\numberline {6}Graph}{10}{section.6}%
+\contentsline {subsection}{\numberline {6.1}SPFA 以及负环}{10}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}Dijkstra}{10}{subsection.6.2}%
+\contentsline {subsection}{\numberline {6.3}Floyd 以及最小环}{10}{subsection.6.3}%
+\contentsline {subsection}{\numberline {6.4}Kruskal}{11}{subsection.6.4}%
+\contentsline {subparagraph}{Prim}{11}{subparagraph*.1}%
+\contentsline {subsection}{\numberline {6.5}倍增 LCA}{11}{subsection.6.5}%
+\contentsline {subsection}{\numberline {6.6}Tarjan LCA}{11}{subsection.6.6}%
+\contentsline {subsection}{\numberline {6.7}拓扑排序}{11}{subsection.6.7}%
+\contentsline {subsection}{\numberline {6.8}欧拉回路}{12}{subsection.6.8}%
+\contentsline {subsection}{\numberline {6.9}强连通分量}{12}{subsection.6.9}%
+\contentsline {subsection}{\numberline {6.10}边双连通分量}{12}{subsection.6.10}%
+\contentsline {subsection}{\numberline {6.11}点双连通分量}{12}{subsection.6.11}%
+\contentsline {subsection}{\numberline {6.12}虚树}{13}{subsection.6.12}%
+\contentsline {section}{\numberline {7}String}{13}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Kmp}{13}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}Trie}{13}{subsection.7.2}%
+\contentsline {subsection}{\numberline {7.3}01Trie}{13}{subsection.7.3}%
+\contentsline {subsection}{\numberline {7.4}Ac Automaton}{14}{subsection.7.4}%
+\contentsline {section}{\numberline {8}Misc}{15}{section.8}%
+\contentsline {subsection}{\numberline {8.1}莫队}{15}{subsection.8.1}%
