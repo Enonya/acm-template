@@ -1,0 +1,36 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+
+\PYG{k}{def} \PYG{n+nf}{dfs}\PYG{p}{(}\PYG{n}{当前位数} \PYG{n}{x}\PYG{p}{,} \PYG{n}{当前状态} \PYG{n}{y}\PYG{p}{,} \PYG{n}{前导零限制} \PYG{n}{st}\PYG{p}{,} \PYG{n}{上界限制} \PYG{n}{limit}\PYG{p}{):}
+    \PYG{k}{if} \PYG{n}{到达边界} \PYG{o+ow}{and} \PYG{n}{符合要求} \PYG{n}{then} 
+    \PYG{n}{返回边界的合法答案}
+  \PYG{k}{if} \PYG{n}{到达边界} \PYG{o+ow}{and} \PYG{n}{不符合要求} \PYG{n}{then}
+    \PYG{n}{返回边界的不合法答案}          \PYG{c+c1}{\PYGZsh{} 这个一般不会有，一般枚举填数的时候如果没有限制就会有（只要会访问到边界不合法情况就要加上）。 }
+
+  \PYG{k}{if} \PYG{n}{当前的状态已经记忆化过} \PYG{n}{then}
+    \PYG{n}{返回记录的答案}
+
+  \PYG{n}{var} \PYG{n}{result} \PYG{o}{=} \PYG{l+m+mi}{0}         \PYG{c+c1}{\PYGZsh{} 记录答案}
+    \PYG{n}{var} \PYG{n}{up} \PYG{o}{=} \PYG{l+m+mi}{9}           \PYG{c+c1}{\PYGZsh{} 当前位填数的上限}
+    \PYG{k}{if} \PYG{n}{有上界限制} \PYG{n}{then}
+        \PYG{n}{up} \PYG{o}{=} \PYG{n}{当前位在} \PYG{n}{n} \PYG{n}{当中的数字}       \PYG{c+c1}{\PYGZsh{} n 是要求的 F(n) 的自变量}
+
+    \PYG{k}{for} \PYG{n}{枚举当前位的填数值} \PYG{k+kn}{from} \PYG{l+m+mi}{0} \PYG{n}{to} \PYG{n}{up} \PYG{p}{:}
+        \PYG{k}{if} \PYG{n}{当前位填的数不符合限制} \PYG{n}{then}
+            \PYG{k}{continue}
+        \PYG{k}{if} \PYG{n}{有前导零限制} \PYG{o+ow}{and} \PYG{n}{当前填写的是} \PYG{l+m+mi}{0} \PYG{n}{then}
+            \PYG{n}{result} \PYG{o}{+=} \PYG{n}{dfs}\PYG{p}{(}\PYG{n}{x} \PYG{o}{\PYGZhy{}} \PYG{l+m+mi}{1}\PYG{p}{,} \PYG{n}{下一个状态}\PYG{p}{,} \PYG{k+kc}{True}\PYG{p}{,} \PYG{n}{是否触碰上界限制}\PYG{p}{)}
+        \PYG{k}{else} \PYG{n}{then}
+            \PYG{n}{result} \PYG{o}{+=} \PYG{n}{dfs}\PYG{p}{(}\PYG{n}{x} \PYG{o}{\PYGZhy{}} \PYG{l+m+mi}{1}\PYG{p}{,} \PYG{n}{下一个状态}\PYG{p}{,} \PYG{k+kc}{False}\PYG{p}{,} \PYG{n}{是否触碰上界限制}\PYG{p}{)}
+
+  \PYG{n}{记录当前状态的答案} \PYG{n}{f}\PYG{p}{[}\PYG{n}{x}\PYG{p}{][}\PYG{n}{y}\PYG{p}{]} \PYG{o}{=} \PYG{n}{result}
+  \PYG{n}{返回答案} \PYG{n}{result}
+
+
+\PYG{k}{def} \PYG{n+nf}{solve}\PYG{p}{(}\PYG{n}{要求的} \PYG{n}{F} \PYG{n}{的自变量} \PYG{n}{n}\PYG{p}{):}
+    \PYG{n}{存储每一位数字的} \PYG{n}{vector} \PYG{n}{清空}
+    \PYG{k}{while} \PYG{n}{n} \PYG{o}{!=} \PYG{l+m+mi}{0} \PYG{n}{then}\PYG{p}{:}
+        \PYG{n}{vector} \PYG{o}{\PYGZlt{}\PYGZhy{}\PYGZhy{}} \PYG{n}{n} \PYG{o}{\PYGZpc{}} \PYG{n}{base}           \PYG{c+c1}{\PYGZsh{} base表示是哪一个进制}
+        \PYG{n}{n} \PYG{o}{/=} \PYG{n}{base}
+    \PYG{n}{清空状态数组}
+    \PYG{n}{返回对应状态的答案}\PYG{err}{（}\PYG{n}{调用} \PYG{n}{dfs}\PYG{err}{）}
+\end{Verbatim}

@@ -1,0 +1,12 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+g++ gen.cpp \PYGZhy{}o gen \PYGZhy{}std\PYG{o}{=}c++17 \PYGZhy{}Wall \PYGZhy{}O2
+g++ ans.cpp \PYGZhy{}o ans \PYGZhy{}std\PYG{o}{=}c++17 \PYGZhy{}Wall \PYGZhy{}O2
+g++ usr.cpp \PYGZhy{}o ans \PYGZhy{}std\PYG{o}{=}c++17 \PYGZhy{}Wall \PYGZhy{}O2
+\PYG{k}{while} true\PYG{p}{;} \PYG{k}{do}
+    ./gen \PYGZgt{} \PYG{l+m}{1}
+    ./ans \PYGZlt{} \PYG{l+m}{1} \PYGZgt{} \PYG{l+m}{2}
+    ./usr \PYGZlt{} \PYG{l+m}{1} \PYGZgt{} \PYG{l+m}{3}
+    diff \PYG{l+m}{2} \PYG{l+m}{3}
+    \PYG{k}{if} \PYG{o}{[} \PYG{n+nv}{\PYGZdl{}?} \PYGZhy{}ne \PYG{l+m}{0} \PYG{o}{]} \PYG{p}{;} \PYG{k}{then} break\PYG{p}{;} \PYG{k}{fi}
+\PYG{k}{done}
+\end{Verbatim}

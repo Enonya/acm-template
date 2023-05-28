@@ -1,0 +1,20 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{n+nb}{syntax} \PYG{k}{on}
+\PYG{k}{color} xterm16
+
+\PYG{k}{set} \PYG{k}{ts}\PYG{p}{=}\PYG{l+m}{4} \PYG{k}{sts}\PYG{p}{=}\PYG{l+m}{4} \PYG{k}{sw}\PYG{p}{=}\PYG{l+m}{4} \PYG{n+nb}{ai}
+\PYG{k}{set} \PYG{n+nb}{wildmenu} \PYG{n+nb}{nocompatible} \PYG{k}{nu} \PYG{n+nb}{rnu} \PYG{n+nb}{ruler} \PYG{n+nb}{mouse}\PYG{p}{=}\PYG{k}{a}
+\PYG{k}{set} \PYG{n+nb}{timeoutlen}\PYG{p}{=}\PYG{l+m}{666} \PYG{n+nb}{ttimeoutlen}\PYG{p}{=}\PYG{l+m}{0} \PYG{n+nb}{backup} \PYG{n+nb}{swapfile} \PYG{n+nb}{undofile}
+\PYG{k}{set} \PYG{k}{ar} \PYG{n+nb}{acd} \PYG{n+nb}{backspace}\PYG{p}{=}indent\PYG{p}{,}\PYG{n+nb}{eol}\PYG{p}{,}\PYG{k}{start} \PYG{n+nb}{foldmethod}\PYG{p}{=}marker
+\PYG{k}{set} \PYG{n+nb}{encoding}\PYG{p}{=}utf\PYG{l+m}{\PYGZhy{}8}
+
+nmap F :\PYG{k}{e} ./\PYG{p}{\PYGZlt{}}CR\PYG{p}{\PYGZgt{}}
+nmap \PYG{p}{\PYGZlt{}}leader\PYG{p}{\PYGZgt{}}\PYG{k}{n} :\PYG{k}{tabnew}\PYG{p}{\PYGZlt{}}CR\PYG{p}{\PYGZgt{}}
+nmap \PYG{p}{\PYGZlt{}}leader\PYG{p}{\PYGZgt{}}\PYG{k}{tc} :\PYG{n+nb}{term}\PYG{p}{\PYGZlt{}}CR\PYG{p}{\PYGZgt{}}
+
+\PYG{n+nb}{inoremap} [ []\PYG{p}{\PYGZlt{}}Esc\PYG{p}{\PYGZgt{}}\PYG{k}{i}
+\PYG{n+nb}{inoremap} \PYGZob{}\PYG{p}{\PYGZlt{}}CR\PYG{p}{\PYGZgt{}} \PYGZob{}\PYGZcb{}\PYG{p}{\PYGZlt{}}ESC\PYG{p}{\PYGZgt{}}\PYG{k}{i}\PYG{p}{\PYGZlt{}}CR\PYG{p}{\PYGZgt{}\PYGZlt{}}ESC\PYG{p}{\PYGZgt{}}O
+\PYG{n+nb}{inoremap} \PYG{p}{(} \PYG{p}{()\PYGZlt{}}Esc\PYG{p}{\PYGZgt{}}\PYG{k}{i}
+\PYG{n+nb}{inoremap} \PYG{l+s+s1}{\PYGZsq{} \PYGZsq{}}\PYGZsq{}\PYG{p}{\PYGZlt{}}Esc\PYG{p}{\PYGZgt{}}\PYG{k}{i}
+\PYG{n+nb}{inoremap} \PYG{l+s+s2}{\PYGZdq{} \PYGZdq{}}\PYGZdq{}\PYG{p}{\PYGZlt{}}Esc\PYG{p}{\PYGZgt{}}\PYG{k}{i}
+\end{Verbatim}

@@ -1,0 +1,14 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{k+kt}{int}\PYG{+w}{ }\PYG{n+nf}{root}\PYG{p}{(}\PYG{k+kt}{int}\PYG{+w}{ }\PYG{n}{x}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k}{if}\PYG{p}{(}\PYG{n}{pa}\PYG{p}{[}\PYG{n}{x}\PYG{p}{]}\PYG{+w}{ }\PYG{o}{!=}\PYG{+w}{ }\PYG{n}{x}\PYG{p}{)}\PYG{+w}{ }\PYG{n}{pa}\PYG{p}{[}\PYG{n}{x}\PYG{p}{]}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{root}\PYG{p}{(}\PYG{n}{pa}\PYG{p}{[}\PYG{n}{x}\PYG{p}{]);}
+\PYG{+w}{    }\PYG{k}{return}\PYG{+w}{ }\PYG{n}{pa}\PYG{p}{[}\PYG{n}{x}\PYG{p}{];}
+\PYG{p}{\PYGZcb{}}
+\PYG{k+kt}{void}\PYG{+w}{ }\PYG{n+nf}{Merge}\PYG{p}{(}\PYG{k+kt}{int}\PYG{+w}{ }\PYG{n}{x}\PYG{p}{,}\PYG{+w}{ }\PYG{k+kt}{int}\PYG{+w}{ }\PYG{n}{y}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k+kt}{int}\PYG{+w}{ }\PYG{n}{rx}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{root}\PYG{p}{(}\PYG{n}{x}\PYG{p}{),}\PYG{+w}{ }\PYG{n}{ry}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{rooot}\PYG{p}{(}\PYG{n}{y}\PYG{p}{);}
+\PYG{+w}{    }\PYG{k}{if}\PYG{p}{(}\PYG{n}{rx}\PYG{+w}{ }\PYG{o}{==}\PYG{+w}{ }\PYG{n}{ry}\PYG{p}{)}\PYG{+w}{ }\PYG{k}{return}\PYG{p}{;}\PYG{+w}{ }
+\PYG{+w}{    }\PYG{k}{if}\PYG{p}{(}\PYG{n}{siz}\PYG{p}{[}\PYG{n}{rx}\PYG{p}{]}\PYG{+w}{ }\PYG{o}{\PYGZlt{}}\PYG{+w}{ }\PYG{n}{siz}\PYG{p}{[}\PYG{n}{ry}\PYG{p}{])}\PYG{+w}{ }
+\PYG{+w}{        }\PYG{n}{pa}\PYG{p}{[}\PYG{n}{rx}\PYG{p}{]}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{ry}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{siz}\PYG{p}{[}\PYG{n}{rx}\PYG{p}{]}\PYG{+w}{ }\PYG{o}{+=}\PYG{+w}{ }\PYG{n}{siz}\PYG{p}{[}\PYG{n}{ry}\PYG{p}{];}
+\PYG{+w}{    }\PYG{k}{else}\PYG{+w}{ }\PYG{n}{pa}\PYG{p}{[}\PYG{n}{ry}\PYG{p}{]}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{rx}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{siz}\PYG{p}{[}\PYG{n}{ry}\PYG{p}{]}\PYG{+w}{ }\PYG{o}{+=}\PYG{+w}{ }\PYG{n}{siz}\PYG{p}{[}\PYG{n}{rx}\PYG{p}{];}
+\PYG{p}{\PYGZcb{}}
+\PYG{c+c1}{// remember to init!}
+\end{Verbatim}

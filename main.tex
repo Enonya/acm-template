@@ -1,0 +1,303 @@
+\documentclass[titlepage, a4paper]{article}
+%\usepackage{euler}
+\usepackage{graphicx, amssymb, amsmath, textcomp, booktabs}
+\usepackage[libertine,vvarbb]{newtxmath}
+\usepackage[scr=rsfso]{mathalfa}
+% \usepackage[lining,semibold,type1]{libertine} % a bit lighter than Times--no osf in math
+\usepackage[T1]{fontenc} % best for Western European languages
+\usepackage{minted}
+\usepackage{listings, color, setspace, titlesec, fancyhdr, mdframed, multicol}
+\usepackage{ucharclasses}
+\usepackage{xunicode, xltxtra}
+\usepackage[inner=1.35cm, outer=0.9cm, top=1.7cm, bottom=0.0cm]{geometry}
+\usepackage{pdfpages}
+\usepackage{tocloft}
+\usepackage{nameref}
+\usepackage{verbatim}
+\usepackage{relsize}
+\usepackage{fontspec}
+\usepackage[colorlinks, linkcolor = black]{hyperref}
+\usepackage[table]{xcolor}
+\usepackage{tabularx}
+% configure fonts
+% if not using CJK
+% \newfontfamily\substitutefont{SimSun}[Scale=0.8,BoldFont=SimHei]
+% \setTransitionsForChinese{\begingroup\substitutefont}{\endgroup}
+\usepackage{xeCJK}
+\setCJKmainfont{Microsoft YaHei}[Scale=0.8]
+\setCJKmonofont{SimHei}[Scale=0.8]
+\setCJKsansfont{KaiTi}[Scale=0.8]
+
+\setmainfont{Cambria}[Scale=0.925]
+\setmonofont{Consolas}[Scale=0.775]
+%\setsansfont{Gill Sans Medium}
+
+\XeTeXlinebreaklocale "zh"
+\XeTeXlinebreakskip = 0pt plus 1pt
+
+\setlength{\parindent}{0em}\setlength{\parskip}{1pt}
+\setlength\itemsep{1pt}
+
+\makeatletter
+\renewcommand{\paragraph}{%
+	\@startsection{paragraph}{4}%
+	{\z@}{1pt \@plus 1pt \@minus 1pt}{-1em}%
+	{\normalfont\normalsize\bfseries}%
+}
+\makeatother
+
+
+%configure the top corners
+\pagestyle{fancy}
+\setlength{\headsep}{0.1cm}
+
+\chead{Acm template}
+\rhead{Page \thepage}
+\lhead{black\_trees}
+
+%configure space between the two columns
+\setlength{\columnsep}{13pt}
+
+%configure minted to display codes
+%\definecolor{Gray}{rgb}{0.9,0.9,0.9}
+
+%remove leading numbers in table of contents
+%\setcounter{secnumdepth}{0}	
+
+%configure section style of table of content
+\renewcommand\cftsecfont{\Large}
+
+%configure section style
+\titleformat{\section}
+{\huge}			% The style of the section title
+{\thesection.}				% a prefix
+{4pt}						% How much space exists between the prefix and the title
+{}					% How the section is represented
+% \titleformat{\section}{\huge}{}{0pt}{}
+\titlespacing{\section}{0pt}{0pt}{0pt}
+\titlespacing{\subsection}{0pt}{0pt}{0pt}
+\titlespacing{\subsubsection}{0pt}{0pt}{0pt}
+
+%enable section to start new page automatically
+%\let\stdsection\section
+%\renewcommand\section{\penalty-100\vfilneg\stdsection}
+
+%\renewcommand\theFancyVerbLine{\arabic{FancyVerbLine}}
+\renewcommand{\theFancyVerbLine}{\sffamily \textcolor[rgb]{0.5,0.5,0.5}{\scriptsize {\arabic{FancyVerbLine}}}}
+
+\setminted[cpp]{
+	style=xcode,
+	mathescape,
+	linenos,
+	autogobble,
+	baselinestretch=0.8,
+	tabsize=3,
+	fontsize=\normalsize,
+	%bgcolor=Gray,
+	frame=single,
+	framesep=1mm,
+	framerule=0.3pt,
+	numbersep=1mm,
+	breaklines=true,
+	breaksymbolsepleft=2pt,
+	%breaksymbolleft=\raisebox{0.8ex}{ \small\reflectbox{\carriagereturn}}, %not moe!
+	%breaksymbolright=\small\carriagereturn,
+	breakbytoken=false,
+	showtabs=true,
+	tab={\relscale{0.6} $\big\vert \ \ \ $ \relscale{1}},
+}
+\setminted[java]{
+	style=xcode,
+	mathescape,
+	linenos,
+	autogobble,
+	baselinestretch=0.8,
+	tabsize=3,
+	fontsize=\normalsize,
+	%bgcolor=Gray,
+	frame=single,
+	framesep=1mm,
+	framerule=0.3pt,
+	numbersep=1mm,
+	breaklines=true,
+	breaksymbolsepleft=2pt,
+	%breaksymbolleft=\raisebox{0.8ex}{ \small\reflectbox{\carriagereturn}}, %not moe!
+	%breaksymbolright=\small\carriagereturn,
+	breakbytoken=false,
+	showtabs=true,
+	tab={\relscale{0.6} $\big\vert \ \ \ $ \relscale{1}},
+}
+\setminted[python]{
+	style=xcode,
+	mathescape,
+	linenos,
+	autogobble,
+	baselinestretch=0.8,
+	tabsize=3,
+	fontsize=\normalsize,
+	%bgcolor=Gray,
+	frame=single,
+	framesep=1mm,
+	framerule=0.3pt,
+	numbersep=1mm,
+	breaklines=true,
+	breaksymbolsepleft=2pt,
+	%breaksymbolleft=\raisebox{0.8ex}{ \small\reflectbox{\carriagereturn}}, %not moe!
+	%breaksymbolright=\small\carriagereturn,
+	breakbytoken=false,
+	showtabs=true,
+	tab={\relscale{0.6} $\big\vert \ \ \ $ \relscale{1}},
+}
+
+\setminted[vim]{
+	style=xcode,
+	mathescape,
+	linenos,
+	autogobble,
+	baselinestretch=0.8,
+	tabsize=2,
+	fontsize=\normalsize,
+	%bgcolor=Gray,
+	frame=single,
+	framesep=1mm,
+	framerule=0.3pt,
+	numbersep=1mm,
+	breaksymbolsepleft=2pt,
+	%breaksymbolleft=\raisebox{0.8ex}{ \small\reflectbox{\carriagereturn}}, %not moe!
+	%breaksymbolright=\small\carriagereturn,
+	breakbytoken=false,
+}
+
+\setminted[sh]{
+	style=xcode,
+	mathescape,
+	linenos,
+	autogobble,
+	baselinestretch=0.8,
+	tabsize=2,
+	fontsize=\normalsize,
+	%bgcolor=Gray,
+	frame=single,
+	framesep=1mm,
+	framerule=0.3pt,
+	numbersep=1mm,
+	breaklines=true,
+	breaksymbolsepleft=2pt,
+	%breaksymbolleft=\raisebox{0.8ex}{ \small\reflectbox{\carriagereturn}}, %not moe!
+	%breaksymbolright=\small\carriagereturn,
+	breakbytoken=false,
+}
+
+%THE SCL BEGINS
+\begin{document}
+	\begin{titlepage}
+		by black\_trees
+	\end{titlepage}
+	\begin{multicols}{2}
+		\setcounter{tocdepth}{3}
+		\begingroup
+		\let\cleardoublepage\relax
+		\let\clearpage\relax
+		\begin{small}
+			\begin{spacing}{0.75}
+				\tableofcontents
+			\end{spacing}
+		\end{small}
+		\newpage
+		\begin{spacing}{0.6}
+			\section{Tools}
+				\subsection{vimrc}
+				 	\inputminted{vim}{src/Tools/.vimrc}
+				 \subsection{对拍}
+				 	\inputminted{sh}{src/Tools/stress.sh}
+				 \subsection{注意事项}
+				 	\begin{itemize}
+				 		\item Linux 下开大栈空间： 如果 ulimit -a 是 unlimited, 那么写入 ulimit -s 65536; ulimit -m 1048576 即可。
+				 	\end{itemize}
+			 \section{Ds}
+			 	\subsection{链表}
+			 		\inputminted{cpp}{src/Ds/List.cpp}
+			 	\subsection{哈希表}
+			 		\inputminted{cpp}{src/Ds/Hash_table.cpp}
+			 	\subsection{并查集}
+			 		\inputminted{cpp}{src/Ds/Dsu.cpp}
+			 	\subsection{树状数组}
+			 		\inputminted{cpp}{src/Ds/Fenwick_tree.cpp}
+			 	\subsection{线段树}
+			 		\inputminted{cpp}{src/Ds/Segment_tree.cpp}
+			 	\subsection{轻重链剖分}
+			 		\inputminted{cpp}{src/Ds/Hld.cpp}
+			 	\subsection{主席树}
+			 		\inputminted{cpp}{src/Ds/Persistent_seg.cpp}
+			 	\subsection{李超树}
+			 		\inputminted{cpp}{src/Ds/Li_chao_tree.cpp}
+			 	\subsection{珂朵莉树}
+			 		\inputminted{cpp}{src/Ds/Odt.cpp}
+			 \section{Dp}
+			 	\subsection{数位 DP}
+			 		\inputminted{python}{src/Dp/Dight_dp.py}
+			 	\subsection{子集卷积/SOS DP}
+			 		\inputminted{cpp}{src/Dp/Sos_dp.cpp}
+			 \section{Math}
+			 	\subsection{线性求逆元以及组合数}
+			 		\inputminted{cpp}{src/Math/Comb_inv.cpp}
+			 	\subsection{快速幂}
+			 		\inputminted{cpp}{src/Math/Qpow.cpp}
+			 	\subsection{矩阵乘法}
+			 		\inputminted{cpp}{src/Math/Matrix_mul.cpp}
+			 	\subsection{高斯消元}
+			 		\inputminted{cpp}{src/Math/Gauss_cut.cpp}
+			 	\subsection{质数}
+			 		\inputminted{cpp}{src/Math/Primes.cpp}
+			 	\subsection{约数}
+			 		\inputminted{cpp}{src/Math/Factors.cpp}
+			 	\subsection{Exgcd}
+			 		\inputminted{cpp}{src/Math/Ex_gcd.cpp}
+			 	\subsection{中国剩余定理}
+			 		\inputminted{cpp}{src/Math/Crt.cpp}
+			 \section{Graph}
+			 	\subsection{SPFA 以及负环}
+			 		\inputminted{cpp}{src/Graph/Spfa.cpp}
+			 	\subsection{Dijkstra}
+			 		\inputminted{cpp}{src/Graph/Dijkstra.cpp}
+			 	\subsection{Floyd 以及最小环}
+			 		\inputminted{cpp}{src/Graph/Floyd.cpp}
+			 	\subsection{Kruskal}
+			 		\inputminted{cpp}{src/Graph/Kruskal.cpp}
+			 	\subparagraph{Prim}
+			 		\inputminted{cpp}{src/Graph/Prim.cpp}
+			 	\subsection{倍增 LCA}
+			 		\inputminted{cpp}{src/Graph/Multiper_lca.cpp}
+			 	\subsection{Tarjan LCA}
+			 		\inputminted{cpp}{src/Graph/Tarjan_Lca.cpp}
+			 	\subsection{拓扑排序}
+			 		\inputminted{cpp}{src/Graph/Topo_sort.cpp}
+			 	\subsection{欧拉回路}
+			 		\inputminted{cpp}{src/Graph/Euler_path.cpp}
+			 	\subsection{强连通分量}
+			 		\inputminted{cpp}{src/Graph/Tarjan_scc.cpp}
+			 	\subsection{边双连通分量}
+			 		\inputminted{cpp}{src/Graph/Tarjan_edcc.cpp}
+			 	\subsection{点双连通分量}
+			 		\inputminted{cpp}{src/Graph/Tarjan_vdcc.cpp}
+			 	\subsection{虚树}
+			 		\inputminted{cpp}{src/Graph/Virtual_tree.cpp}
+			 \section{String}
+			 	\subsection{Kmp}
+			 		\inputminted{cpp}{src/String/Kmp.cpp}
+			 	\subsection{Trie}
+			 		\inputminted{cpp}{src/String/Trie.cpp}
+			 	\subsection{01Trie}
+			 		\inputminted{cpp}{src/String/01_trie.cpp}
+			 	\subsection{Ac Automaton}
+			 		\inputminted{cpp}{src/String/Ac_automaton.cpp}
+		\end{spacing}
+			\endgroup
+	\end{multicols}
+	
+	\begin{center}
+		\LARGE{Good Luck \&\& Have Fun!}
+	\end{center}
+		
+	\end{document}
+	%THE SCL ENDS
