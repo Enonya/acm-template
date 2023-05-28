@@ -53,7 +53,7 @@
 \pagestyle{fancy}
 \setlength{\headsep}{0.1cm}
 
-\chead{Acm template}
+\chead{Acm Template}
 \rhead{Page \thepage}
 \lhead{black\_trees}
 
@@ -193,7 +193,22 @@
 %THE SCL BEGINS
 \begin{document}
 	\begin{titlepage}
-		by black\_trees
+		\begin{center}
+			\Huge{\text{Acm Template}}
+			
+			\Large{\text{By black\_trees}}
+			
+			\begin{figure}[H]
+				\centering
+				\includegraphics[scale=1.3]{senpai.png}
+			\end{figure}
+		
+			\Huge{逸一时，误一世}
+			
+			\Huge{逸久逸久罢一龄}
+			
+			\Huge{赐予我力量吧！先辈！()}
+		\end{center}
 	\end{titlepage}
 	\begin{multicols}{2}
 		\setcounter{tocdepth}{3}
@@ -214,7 +229,10 @@
 				 	\inputminted{sh}{src/Tools/stress.sh}
 				 \subsection{注意事项}
 				 	\begin{itemize}
-				 		\item Linux 下开大栈空间： 如果 ulimit -a 是 unlimited, 那么写入 ulimit -s 65536; ulimit -m 1048576 即可。
+				 		\item Linux 下开大栈空间： 如果 \texttt{ulimit -a} 是 \texttt{unlimited}, 那么写入 \texttt{ulimit -s 65536; ulimit -m 1048576} 即可。
+				 		\item 如果有下发 chk 记得 \texttt{sudo chmod +x chk}
+				 		\item 测程序运行时间不要用 \texttt{time}，用 \texttt{usr/bin/time}（GNU time）,运行时间不是 real 是 usr + sys!
+				 		\item 调 RE 的编译参数： \texttt{-g -fsanitize=address,undefined}，测效率的时候不要用！
 				 	\end{itemize}
 			 \section{Basic}
 			 	\subsection{二分}
@@ -253,22 +271,29 @@
 			 		
 			 \section{Ds}
 			 	\subsection{链表}
+			 		记得内存回收！
 			 		\inputminted{cpp}{src/Ds/List.cpp}
 			 	\subsection{哈希表}
+			 		小心 Hash 冲突！
 			 		\inputminted{cpp}{src/Ds/Hash_table.cpp}
 			 	\subsection{并查集}
+			 		如果要 $O(\alpha(n))$，记得两个优化都加上。
 			 		\inputminted{cpp}{src/Ds/Dsu.cpp}
 			 	\subsection{树状数组}
 			 		\inputminted{cpp}{src/Ds/Fenwick_tree.cpp}
 			 	\subsection{线段树}
+			 		搞清楚信息是不是具有幺半群性质！
 			 		\inputminted{cpp}{src/Ds/Segment_tree.cpp}
 			 	\subsection{轻重链剖分}
 			 		\inputminted{cpp}{src/Ds/Hld.cpp}
 			 	\subsection{主席树}
 			 		\inputminted{cpp}{src/Ds/Persistent_seg.cpp}
 			 	\subsection{李超树}
+			 		这里维护的是插入一个线段，询问一块位置上的最值。
+			 		如果是插入直线，就规定一个上下界，算一下和上下界的交点即可。
 			 		\inputminted{cpp}{src/Ds/Li_chao_tree.cpp}
 			 	\subsection{珂朵莉树}
+			 		Split 的时候不要 Split 错了！
 			 		\inputminted{cpp}{src/Ds/Odt.cpp}
 			 \section{Dp}
 			 	\subsection{一些注意事项}
@@ -295,6 +320,12 @@
 			 	\subsection{数位 DP}
 			 		\inputminted{python}{src/Dp/Dight_dp.py}
 			 	\subsection{子集卷积/SOS DP}
+			 		给你一个序列 $a_0,a_1,a_2,\dots,a_{2^n - 1}$。
+			 	 
+			 		要你求 $b_i = \sum\limits_{j \ \texttt{and}\  i = j} a_j$。
+			 			
+			 		（此处的 $\sum$ 也可以换成 $\min,\max,\bigoplus$，因为它们都满足结合律和交换律？）
+			 	
 			 		\inputminted{cpp}{src/Dp/Sos_dp.cpp}
 			 	\subsection{斜率优化}
 			 		可以斜率优化的方程通常具有以下形式：
@@ -451,6 +482,7 @@
 			 	\subsection{矩阵乘法}
 			 		\inputminted{cpp}{src/Math/Matrix_mul.cpp}
 			 	\subsection{高斯消元}
+			 		如果是“分手是祝愿”那题的特殊矩阵，就不要硬套板子了！
 			 		\inputminted{cpp}{src/Math/Gauss_cut.cpp}
 			 	\subsection{质数}
 			 		\inputminted{cpp}{src/Math/Primes.cpp}
@@ -613,14 +645,18 @@
 			 	\subsection{强连通分量}
 			 		\inputminted{cpp}{src/Graph/Tarjan_scc.cpp}
 			 	\subsection{边双连通分量}
+			 		记住，边双缩完是一棵树！
 			 		\inputminted{cpp}{src/Graph/Tarjan_edcc.cpp}
 			 	\subsection{点双连通分量}
 			 		\inputminted{cpp}{src/Graph/Tarjan_vdcc.cpp}
 			 	\subsection{虚树}
+			 		这个做法似乎还是 $O(n \log n)$ 的？
 			 		\inputminted{cpp}{src/Graph/Virtual_tree.cpp}
 			 \section{String}
 			 	\subsection{Kmp}
 			 		\inputminted{cpp}{src/String/Kmp.cpp}
+			 	\subsection{字符串 Hash}
+			 		\inputminted{cpp}{src/String/String_hash.cpp}
 			 	\subsection{Trie}
 			 		\inputminted{cpp}{src/String/Trie.cpp}
 			 	\subsection{01Trie}
@@ -629,13 +665,24 @@
 			 		\inputminted{cpp}{src/String/Ac_automaton.cpp}
 			 \section{Misc}
 			 	\subsection{莫队}
+			 		块长要根据题目来调整！
 			 		\inputminted{cpp}{src/Misc/Mo.cpp}
+			 	\subsection{CDQ 分治}
+			 		简单来说就是把动态问题通过分治转化为多个静态问题。
+			 		
+			 		可以拿来做偏序，也可以拿来做斜率优化，记住一定要先递归 solve 需要用到的信息。
+			 		
+			 		这里用三维偏序作例子：
+			 		
+			 		\inputminted{cpp}{src/Misc/Cdq.cpp}
+			 	\subsection{Mt19937}
+			 		\inputminted{cpp}{src/Misc/Mt19937.cpp}
 		\end{spacing}
 			\endgroup
 	\end{multicols}
 	
 	\begin{center}
-		\LARGE{Good Luck \&\& Have Fun!}
+		\LARGE{Enjoy the contest! \&\& 哼嗯嗯啊啊啊啊啊啊}
 	\end{center}
 		
 	\end{document}

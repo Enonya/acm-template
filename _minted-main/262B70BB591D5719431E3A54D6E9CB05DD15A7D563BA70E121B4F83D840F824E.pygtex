@@ -1,0 +1,25 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{c+cp}{\PYGZsh{}include}\PYG{+w}{ }\PYG{c+cpf}{\PYGZlt{}random\PYGZgt{}}
+\PYG{c+cp}{\PYGZsh{}include}\PYG{+w}{ }\PYG{c+cpf}{\PYGZlt{}iostream\PYGZgt{}}
+\PYG{k}{using}\PYG{+w}{ }\PYG{k}{namespace}\PYG{+w}{ }\PYG{n+nn}{std}\PYG{p}{;}
+
+\PYG{k+kt}{int}\PYG{+w}{ }\PYG{n+nf}{main}\PYG{p}{()}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{	}\PYG{n}{std}\PYG{o}{::}\PYG{n}{random\PYGZus{}device}\PYG{+w}{ }\PYG{n}{seedgen}\PYG{p}{;}\PYG{+w}{ }\PYG{c+c1}{// 非确定的均匀随机位生成器}
+\PYG{+w}{								}\PYG{c+c1}{// 在熵池耗尽之前非常高效}
+\PYG{+w}{								}\PYG{c+c1}{// 所以用来当种子生成器}
+\PYG{+w}{								}\PYG{c+c1}{// NOIP 考场最好不用？}
+\PYG{+w}{    }\PYG{c+c1}{// 这个东西似乎在 32bit 上会寄（生成同样的数据），}
+\PYG{+w}{    }\PYG{c+c1}{// 但是 win下的 msys2 64bit 没有事情，NOI linux 还没有测试。}
+\PYG{+w}{	}\PYG{n}{用}\PYG{+w}{ }\PYG{n}{time}\PYG{+w}{ }\PYG{n}{也行}\PYG{err}{。}\PYG{+w}{					}
+
+\PYG{+w}{    }\PYG{n}{std}\PYG{o}{::}\PYG{n}{mt19937}\PYG{+w}{ }\PYG{n}{Myrand}\PYG{p}{(}\PYG{n}{seedgen}\PYG{p}{());}\PYG{+w}{ }\PYG{c+c1}{// 自定义一个 mt19937 类型的生成器}
+
+\PYG{+w}{    }\PYG{n}{std}\PYG{o}{::}\PYG{n}{uniform\PYGZus{}int\PYGZus{}distribution}\PYG{o}{\PYGZlt{}}\PYG{k+kt}{long}\PYG{+w}{ }\PYG{k+kt}{long}\PYG{o}{\PYGZgt{}}\PYG{+w}{ }\PYG{n}{RangeInt}\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{114514}\PYG{p}{);}\PYG{+w}{ }\PYG{c+c1}{// 指定整数范围}
+\PYG{+w}{	}\PYG{n}{std}\PYG{o}{::}\PYG{n}{uniform\PYGZus{}real\PYGZus{}distribution}\PYG{o}{\PYGZlt{}}\PYG{k+kt}{long}\PYG{+w}{ }\PYG{k+kt}{double}\PYG{o}{\PYGZgt{}}\PYG{+w}{ }\PYG{n}{RangeReal}\PYG{p}{(}\PYG{l+m+mf}{0.0}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mf}{1919810.0}\PYG{p}{);}\PYG{+w}{ }\PYG{c+c1}{// 指定实数范围}
+
+\PYG{+w}{	}\PYG{n}{cout}\PYG{+w}{ }\PYG{o}{\PYGZlt{}\PYGZlt{}}\PYG{+w}{ }\PYG{n}{Myrand}\PYG{p}{()}\PYG{+w}{ }\PYG{o}{\PYGZlt{}\PYGZlt{}}\PYG{+w}{ }\PYG{n}{endl}\PYG{p}{;}\PYG{+w}{ }\PYG{c+c1}{// 没有范围,但是 mt19937 是 32 位的，所以会在 int 以内。}
+\PYG{+w}{	}\PYG{n}{cout}\PYG{+w}{ }\PYG{o}{\PYGZlt{}\PYGZlt{}}\PYG{+w}{ }\PYG{n}{RangeInt}\PYG{p}{(}\PYG{n}{Myrand}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{\PYGZlt{}\PYGZlt{}}\PYG{+w}{ }\PYG{n}{endl}\PYG{p}{;}\PYG{+w}{ }\PYG{c+c1}{// 有范围的均匀整数}
+\PYG{+w}{	}\PYG{n}{cout}\PYG{+w}{ }\PYG{o}{\PYGZlt{}\PYGZlt{}}\PYG{+w}{ }\PYG{n}{RangeReal}\PYG{p}{(}\PYG{n}{Myrand}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{\PYGZlt{}\PYGZlt{}}\PYG{+w}{ }\PYG{n}{endl}\PYG{p}{;}\PYG{+w}{ }\PYG{c+c1}{// 有范围的均匀实数}
+\PYG{p}{\PYGZcb{}}
+\PYG{c+c1}{// 还有一个用于 64 位整数版的 mt19937: mt19937\PYGZus{}64}
+\end{Verbatim}

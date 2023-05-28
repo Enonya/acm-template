@@ -54,4 +54,9 @@
 \PYG{+w}{        }\PYG{k}{return}\PYG{+w}{ }\PYG{n}{Max}\PYG{p}{(\PYGZob{}}\PYG{n}{ret}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{id}\PYG{p}{[}\PYG{n}{p}\PYG{p}{]\PYGZcb{},}\PYG{+w}{ }\PYG{n}{Max}\PYG{p}{(}\PYG{n}{query}\PYG{p}{(}\PYG{n}{p}\PYG{+w}{ }\PYG{o}{\PYGZlt{}\PYGZlt{}}\PYG{+w}{ }\PYG{l+m+mi}{1}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{l}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{mid}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{x}\PYG{p}{),}\PYG{+w}{ }\PYG{n}{query}\PYG{p}{(}\PYG{n}{p}\PYG{+w}{ }\PYG{o}{\PYGZlt{}\PYGZlt{}}\PYG{+w}{ }\PYG{l+m+mi}{1}\PYG{+w}{ }\PYG{o}{|}\PYG{+w}{ }\PYG{l+m+mi}{1}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{mid}\PYG{+w}{ }\PYG{o}{+}\PYG{+w}{ }\PYG{l+m+mi}{1}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{r}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{x}\PYG{p}{)));}
 \PYG{+w}{    }\PYG{p}{\PYGZcb{}}
 \PYG{p}{\PYGZcb{}}\PYG{+w}{ }\PYG{n}{tr}\PYG{p}{;}
+\PYG{c+c1}{// update: }
+\PYG{k}{if}\PYG{p}{(}\PYG{n}{x}\PYG{+w}{ }\PYG{o}{\PYGZgt{}}\PYG{+w}{ }\PYG{n}{xx}\PYG{p}{)}\PYG{+w}{ }\PYG{n}{swap}\PYG{p}{(}\PYG{n}{x}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{xx}\PYG{p}{),}\PYG{+w}{ }\PYG{n}{swap}\PYG{p}{(}\PYG{n}{y}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{yy}\PYG{p}{);}
+\PYG{n}{add}\PYG{p}{(}\PYG{n}{x}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{y}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{xx}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{yy}\PYG{p}{),}\PYG{+w}{ }\PYG{n}{tr}\PYG{p}{.}\PYG{n}{update}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{1}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{mod1}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{x}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{xx}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{tot}\PYG{p}{);}
+\PYG{c+c1}{// query:}
+\PYG{n}{tr}\PYG{p}{.}\PYG{n}{query}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{1}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{mod1}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{k}\PYG{p}{).}\PYG{n}{second}\PYG{p}{;}
 \end{Verbatim}

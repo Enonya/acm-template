@@ -53,3 +53,8 @@ struct LichaoTree {
         return Max({ret, id[p]}, Max(query(p << 1, l, mid, x), query(p << 1 | 1, mid + 1, r, x)));
     }
 } tr;
+// update: 
+if(x > xx) swap(x, xx), swap(y, yy);
+add(x, y, xx, yy), tr.update(1, 1, mod1, x, xx, tot);
+// query:
+tr.query(1, 1, mod1, k).second;

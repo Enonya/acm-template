@@ -15,13 +15,11 @@
 
 ## Task List
 
-记得给板子加一些描述和注释（最后来做）
-
 - Tools
   - vimrc(under linux, for contest)
   - bash stress test script
-  - data generator, (seq, tree, graph) x
-  - notice & warns x
+  - data generator, (seq, tree, graph) (x)
+  - notice & warns
 - Basic
   - Binary_search
   - Time_complexity
@@ -45,7 +43,7 @@
   - Comb_inv
   - Qpow
   - Lucas, Ex_lucas
-  - Some_formula (need formating)
+  - Some_formula
   - Matrix_mul
   - Gauss_cut
   - Primes
@@ -54,8 +52,9 @@
   - Crt, Ex_crt
 - Misc
   - Mo
-  - Cdq x
-  - Wqs x
+  - Cdq
+  - Wqs (x)
+  - Mt19937
 - Graph
   - Spfa(include Minus_ring)
   - Dijkstra
@@ -64,14 +63,13 @@
   - Prim
   - Multiper_lca
   - Tarjan_lca
-  - Kruskal_rebuild_tree x
   - Topo_sort 
   - Euler_path
-  - Tarjan_scc(2-SAT include x)
+  - Tarjan_scc (2-SAT(x)) 
   - Tarjan_vdcc
   - Tarjan_edcc
   - Virtual_tree
-  - Some_theory x
+  - Some_theory (x)
 - String
   - Kmp
   - Trie
